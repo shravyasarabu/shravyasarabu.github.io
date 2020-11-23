@@ -1,0 +1,91 @@
+<html> 
+<head> 
+	<script> 
+    <!-- to get the value -->
+		function dis(v) 
+		{ 
+			document.getElementById("result").value+=v
+		} 
+		
+		function solve() 
+		{ 
+			let x = document.getElementById("result").value 
+			let y = eval(x) 
+			document.getElementById("result").value = y 
+		} 
+		
+		function clr() 
+		{ 
+			document.getElementById("result").value = "" 
+		} 
+    function percentage() 
+		{ 
+      let x = document.getElementById("result").value
+      let y = x/100
+			document.getElementById("result").value = y  
+		}
+	</script> 
+	<!-- for styling -->
+	<style>  
+		#myHeader {
+		background-color:orange; 
+		color: white; 
+		border: solid black 1px; 
+		width:100% 
+		} 
+    #otherinput {
+		background-color:grey; 
+		color: white; 
+		border: solid black 1px; 
+		width:100% 
+		} 
+    input[type="button"] 
+		{ 
+		background-color:grey; 
+		color: white; 
+		border: solid black 1px; 
+		width:100% 
+		} 
+		input[type="text"] 
+		{ 
+		background-color:white;  
+		width:100%
+		} 
+	</style> 
+</head> 
+<body>  
+	<table border="1">
+    <tr>
+      <td colspan="4" ><input type="text" id="result"/></td> 
+    </tr>
+    <tr>
+      <td colspan="2"><input type="button" value="AC" onclick="clr()"/> </td>
+      <td><input type="button" value="%" onclick="percentage()"/> </td> 
+      <td><input type="button" value="/" id= "myheader" onclick="dis('/')"/> </td> 
+    </tr>
+    <tr> 
+			<td><input type="button" value="7" onclick="dis('7')"/> </td> 
+			<td><input type="button" value="8" onclick="dis('8')"/> </td> 
+			<td><input type="button" value="9" onclick="dis('9')"/> </td> 
+			<td><input type="button" value="*" id= "myheader" onclick="dis('*')"/> </td> 
+	  </tr>
+    <tr> 
+			<td><input type="button" value="4" onclick="dis('4')"/> </td> 
+			<td><input type="button" value="5" onclick="dis('5')"/> </td> 
+			<td><input type="button" value="6" onclick="dis('6')"/> </td> 
+			<td><input type="button" value="-"  id= "myheader"onclick="dis('-')"/> </td> 
+		</tr>
+	  <tr> 
+			<td><input type="button" value="1" onclick="dis('1')"/> </td> 
+			<td><input type="button" value="2" onclick="dis('2')"/> </td> 
+			<td><input type="button" value="3" onclick="dis('3')"/> </td> 
+			<td><input type="button" value="/"  id= "myheader"onclick="dis('/')"/> </td> 
+		</tr> 
+    <tr> 
+      <td colspan="2"><input type="button" value="0" id= "otherinput" onclick="dis('0')"/> </td>
+			<td><input type="button" value="." onclick="dis('.')"/> </td> 
+			<td><input type="button" value="=" onclick="solve()"/> </td> 
+		</tr> 
+	</table> 
+</body> 
+</html> 
